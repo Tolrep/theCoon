@@ -5,6 +5,7 @@ class Superhero {
     public $name;
     public $hp;
     public $force;
+    public $id;
 
     public function getName()
     {
@@ -21,6 +22,7 @@ class Superhero {
         return $this->force;
     }
 
+
     public function atk(Superhero $cible)
     {
         $cible->hp = $cible->hp - $this->force;
@@ -29,11 +31,12 @@ class Superhero {
         }
     }
 
-    public function __construct(string $name, string $hp, string $force)
+    public function __construct(string $name, string $hp, string $force, string $id)
     {
         $this->name = $name;
         $this->hp = $hp;
         $this->force = $force;
+        $this->id =(int) $id;
     }
 
     public function __toString()
