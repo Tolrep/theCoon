@@ -1,0 +1,22 @@
+
+[class*="col-"]
+{
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.photo_bannier
+{
+    background-image: url("img/thecoon.jpg");
+}
+
+.stats_bannier
+{
+
+    max-height: 30vw;
+}
+
+/**<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  ">
+<h1>THE FIGHT</h1>
+</div>
+<div class="row m-0 p-0 photo_bannier stats_bannier img-fluid">
