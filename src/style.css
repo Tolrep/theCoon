@@ -1,19 +1,20 @@
 
-[class*="col-"]
-{
-    border: 2px solid black;
-    border-radius: 6px;
+.coin{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 10%;
 }
 
-.photo_bannier
-{
-    background-image: url("img/thecoon.jpg");
-}
 
-.stats_bannier
-{
-
-    max-height: 30vw;
+.versus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /**<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  ">

@@ -85,9 +85,11 @@
 
             </div>
         </div>
-        <div class="row">
+    <img src="/img/versus.png" class="versus">
+
+    <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block">LET'S FIGHT</button>
             </div>
                 </form>
         </div>
