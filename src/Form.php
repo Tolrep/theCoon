@@ -1,5 +1,5 @@
 <?php
-
+require 'creationSuperhero.php';
 
 ?>
 
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <link rel="stylesheet" href="style.css" />
+
 
 
 
@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
@@ -58,38 +56,58 @@
 
 
         <div class="row">
-            <div class="col-md-6">
-                <form action="post_verif.php" method="POST">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="1">
-                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio1" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==2){echo ("checked");} ?> value="2">
-                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                    </div>
-
-
-            </div>
-            <div class="col-md-6">
-
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio3" name="customRadio2" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio2']==3){echo ("checked");} ?> value="3">
-                        <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio4" name="customRadio2" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio2']==4){echo ("checked");} ?> value="4">
-                        <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
-                    </div>
-
-
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <form action="post_verif.php" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                    <?php for($i=1; $i<5; $i++){
+                        $idHero= rand(0, 731);
+                        if (!array_key_exists($idHero, $hero)){
+                            $idHero= rand(0, 731);
+                            if (!array_key_exists($idHero, $hero)){
+                            $idHero= rand(0, 731);
+                                if (!array_key_exists($idHero, $hero)){
+                                    $idHero= rand(0, 731);}
+                            }
+                        };?>
+                        <div class="thumbnail">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio<?=$i?>" name="customRadio1" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=$hero[$idHero]?>">
+                                <label class="custom-control-label" for="customRadio<?=$i?>">Toggle this custom radio</label>
+                            </div>
+                            <p><?=$hero[$idHero]?></p>
+                        </div>
+                    <?php }?>
+                </div>
+                <div class="col-md-6">
+                    <?php for($l=11; $l<15; $l++){
+                        $idAd = rand(0, 731);
+                        if (!array_key_exists($idAd, $hero)) {
+                            $idAd = rand(0, 731);
+                            if (!array_key_exists($idAd, $hero)) {
+                                $idAd = rand(0, 731);
+                                if (!array_key_exists($idAd, $hero)) {
+                                    $idAd = rand(0, 731);
+                                }
+                            }
+                        };?>
+                        <div class="thumbnail">
+                            <div class="custom-control custom-radio">
+                                <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
+                                <input type="radio" id="customRadio<?=$l?>" name="customRadio2" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=$hero[$idAd]?>">
+                                <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
+                            </div>
+                            <p><?=$hero[$idAd]?></p>
+                        </div>
+                    <?php }?>
+                </div>
+                </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary text-center">Submit</button>
             </div>
-                </form>
+            </form>
+        </div>
         </div>
 
     <?php
@@ -103,8 +121,9 @@
 
 
 <?php
-
+var_dump(   $_SESSION['inputs']);
 unset($_SESSION['inputs']);
 unset($_SESSION['errors']);
 unset($_SESSION['success']);
+
 
