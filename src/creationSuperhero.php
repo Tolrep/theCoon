@@ -12,6 +12,8 @@ $infoJson = $response->getBody();
 $allHeroInfo = json_decode($infoJson->getContents());
 $hero = [];
 
+$roundNumber = [];
+
 foreach ($allHeroInfo as $idHero => $heroInfo) {
     $id = $heroInfo->id;
     $name = $heroInfo->name;
