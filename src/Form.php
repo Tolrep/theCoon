@@ -35,7 +35,7 @@ require 'creationSuperhero.php';
         <div class="row">
             <div class="col-md-12">
                 <?php if (array_key_exists('errors', $_SESSION)):?>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger role="alert"">
                         <?= implode('<br>',$_SESSION['errors'])?>
                     </div>
 
