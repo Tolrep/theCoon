@@ -35,7 +35,7 @@ require 'creationSuperhero.php';
         <div class="row">
             <div class="col-md-12">
                 <?php if (array_key_exists('errors', $_SESSION)):?>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger role="alert"">
                         <?= implode('<br>',$_SESSION['errors'])?>
                     </div>
 
@@ -72,7 +72,7 @@ require 'creationSuperhero.php';
                         };?>
                         <div class="thumbnail">
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio<?=$i?>" name="customRadio1" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=$hero[$idHero]?>">
+                                <input type="radio" id="customRadio<?=$i?>" name="customRadio1" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=($hero[$idHero])->id?>">
                                 <label class="custom-control-label" for="customRadio<?=$i?>">Toggle this custom radio</label>
                             </div>
                             <p><?=$hero[$idHero]?></p>
@@ -94,7 +94,7 @@ require 'creationSuperhero.php';
                         <div class="thumbnail">
                             <div class="custom-control custom-radio">
                                 <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
-                                <input type="radio" id="customRadio<?=$l?>" name="customRadio2" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=$hero[$idAd]?>">
+                                <input type="radio" id="customRadio<?=$l?>" name="customRadio2" class="custom-control-input" <?php if ($_SESSION['inputs']['customRadio1']==1){echo ("checked");} ?> value="<?=($hero[$idAd])->id?>">
                                 <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
                             </div>
                             <p><?=$hero[$idAd]?></p>

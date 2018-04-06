@@ -23,9 +23,33 @@ class Superhero {
     }
 
 
-    public function atk(Superhero $cible)
+    public function punch(Superhero $cible)
+    {
+        $cible->hp = $cible->hp - ($this->force * 0.5);
+        if ($cible->hp < 0) {
+            $cible->hp = 0;
+        }
+    }
+
+    public function kick(Superhero $cible)
+    {
+        $cible->hp = $cible->hp - ($this->force * 0.75);
+        if ($cible->hp < 0) {
+            $cible->hp = 0;
+        }
+    }
+
+    public function combo(Superhero $cible)
     {
         $cible->hp = $cible->hp - $this->force;
+        if ($cible->hp < 0) {
+            $cible->hp = 0;
+        }
+    }
+
+    public function falconPunch(Superhero $cible)
+    {
+        $cible->hp = $cible->hp - ($this->force * 1.5);
         if ($cible->hp < 0) {
             $cible->hp = 0;
         }
