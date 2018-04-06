@@ -1,0 +1,77 @@
+
+body
+{
+    font-size: 1.2rem;
+    font-family: 'Bangers', cursive;
+    background-color: black;
+    color: aliceblue;
+
+
+}
+
+.enemy
+{
+    color: red;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+}
+
+.hero
+{
+    color: blue;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+}
+
+
+.selectEnemy
+
+{
+    color: orangered;
+    font-size: 2rem;
+
+    font-family: 'Bangers', cursive;
+
+
+}
+
+.selectHero
+{
+    color:dodgerblue;
+    font-size: 2rem;
+
+    font-family: 'Bangers', cursive;
+
+
+
+}
+
+.Choississez
+{
+    background-color: black;
+    color:white;
+}
+
+.bouton
+{
+    background-color: black;
+    color:white;
+    font-size: 2em;
+    height:100px;
+    padding-left:20%;
+    padding-right:20%;
+
+}
+
+
+
+
+
+
+
+.
+/*<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  ">
+<h1>THE FIGHT</h1>
+</div>
+<div class="row m-0 p-0 photo_bannier stats_bannier img-fluid">
+<img src="img/coin.png" class="">
