@@ -4,6 +4,17 @@ require 'creationSuperhero.php';
 
 $compteur = 1;
 
+if ($hero[($_SESSION['inputs']['customRadio1'])]->hp === 0) {
+    echo $hero[($_SESSION['inputs']['customRadio2'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio1'])]->name . " en combat singulier.<br>";
+    die;
+}
+
+if ($hero[($_SESSION['inputs']['customRadio2'])]->hp === 0) {
+    echo $hero[($_SESSION['inputs']['customRadio1'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio2'])]->name . " en combat singulier.<br>";
+    die;
+}
+
+
 foreach ($_SESSION['roundNumber'] as $key => $valeur){
     if ($key%2){
         $result = $hero[($_SESSION['inputs']['customRadio1'])]->name.' a infligé '.$hero[($_SESSION['inputs']['customRadio1'])]->force.' de dégâts à '.$hero[($_SESSION['inputs']['customRadio2'])]->name.'. Il reste '.$valeur.' points de vie à '.$hero[($_SESSION['inputs']['customRadio2'])]->name.'.<br><br>';
