@@ -80,15 +80,11 @@ if (isset($_POST["submit8"])) {
 }
 
 if ($hero[($_SESSION['inputs']['customRadio1'])]->hp === 0) {
-    echo $hero[($_SESSION['inputs']['customRadio2'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio1'])]->name . " en combat singulier.";
-    header("refresh:3;url=resume_du_combat.php");
-    die;
+    header("refresh:1;url=resume_du_combat.php");
 }
 
 if ($hero[($_SESSION['inputs']['customRadio2'])]->hp === 0) {
-    echo $hero[($_SESSION['inputs']['customRadio1'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio2'])]->name . " en combat singulier.";
-    header("refresh:3;url=resume_du_combat.php");
-    die;
+    header("refresh:1;url=resume_du_combat.php");
 }
 
 ?>
