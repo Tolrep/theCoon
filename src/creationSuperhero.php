@@ -19,6 +19,7 @@ foreach ($allHeroInfo as $idHero => $heroInfo) {
     $name = $heroInfo->name;
     $hp = $heroInfo->powerstats->durability;
     $force = $heroInfo->powerstats->strength;
-    $hero[$id] = new Superhero($name, $hp , $force, $id);
+    $image = $heroInfo->images->sm;
+    $hero[$id] = new Superhero($name, $hp , $force, $id, $image);
 
 }

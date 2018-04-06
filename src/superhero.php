@@ -6,6 +6,7 @@ class Superhero {
     public $hp;
     public $force;
     public $id;
+    public $image;
 
     public function getName()
     {
@@ -55,12 +56,13 @@ class Superhero {
         }
     }
 
-    public function __construct(string $name, string $hp, string $force, string $id)
+    public function __construct(string $name, string $hp, string $force, string $id, string $image)
     {
         $this->name = $name;
         $this->hp = $hp;
         $this->force = $force;
         $this->id =(int) $id;
+        $this->image = $image;
     }
 
     public function __toString()

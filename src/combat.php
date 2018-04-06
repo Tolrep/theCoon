@@ -80,11 +80,11 @@ if (isset($_POST["submit8"])) {
 }
 
 if ($hero[($_SESSION['inputs']['customRadio1'])]->hp === 0) {
-    header("refresh:1;url=resume_du_combat.php");
+    header("location:resume_du_combat.php");
 }
 
 if ($hero[($_SESSION['inputs']['customRadio2'])]->hp === 0) {
-    header("refresh:1;url=resume_du_combat.php");
+    header("location:resume_du_combat.php");
 }
 
 ?>
