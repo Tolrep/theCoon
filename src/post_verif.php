@@ -32,10 +32,12 @@ if(!empty($errors)) {
 } else {
     $_SESSION['success'] = 1;
     $_SESSION['inputs'] =$_POST;
-    header('location:Form.php');
+    header('location:combat.php');
     $message =$_POST['message'];
 
 
     }
+
+
 
 
