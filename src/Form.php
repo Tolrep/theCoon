@@ -56,10 +56,10 @@ require 'creationSuperhero.php';
 
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
             <form action="post_verif.php" method="POST">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <?php for($i=1; $i<5; $i++){
                         $idHero= rand(0, 731);
                         if (!array_key_exists($idHero, $hero)){
@@ -70,17 +70,17 @@ require 'creationSuperhero.php';
                                     $idHero= rand(0, 731);}
                             }
                         };?>
-                        <div class="thumbnail">
-                            <img src="<?=($hero[$idHero])->image?>" alt="photo hero"></div>
+                        <div class="">
+                            <img class="image-responsive" src="<?=($hero[$idHero])->image?>" alt="photo hero"></div>
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio<?=$i?>" name="customRadio1" class="custom-control-input" value="<?=($hero[$idHero])->id?>">
-                                <label class="custom-control-label" for="customRadio<?=$i?>">Toggle this custom radio</label>
+                                <label class="custom-control-label" for="customRadio<?=$i?>">Select</label>
                             </div>
                             <p><?=$hero[$idHero]?></p>
                         </div>
                     <?php }?>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <?php for($l=11; $l<15; $l++){
                         $idAd = rand(0, 731);
                         if (!array_key_exists($idAd, $hero)) {
@@ -92,12 +92,11 @@ require 'creationSuperhero.php';
                                 }
                             }
                         };?>
-                        <div class="thumbnail">
-                            <img src="<?=($hero[$idAd])->image?>" alt="photo hero"></div>
+                        <div class="">
+                            <img class="image-responsive" src="<?=($hero[$idAd])->image?>" alt="photo hero"></div>
                             <div class="custom-control custom-radio">
-                                <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
                                 <input type="radio" id="customRadio<?=$l?>" name="customRadio2" class="custom-control-input" value="<?=($hero[$idAd])->id?>">
-                                <label class="custom-control-label" for="customRadio<?=$l?>">Toggle this custom radio</label>
+                                <label class="custom-control-label" for="customRadio<?=$l?>">Select</label>
                             </div>
                             <p><?=$hero[$idAd]?></p>
                         </div>

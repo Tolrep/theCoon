@@ -95,36 +95,66 @@ if ($hero[($_SESSION['inputs']['customRadio2'])]->hp === 0) {
     </head>
     <body>
     <?php if ($round === 1){?>
-        <h1>Attaquant: <?php echo ($hero[($_SESSION['inputs']['customRadio2'])]->name)?></h1>
-        <h1>Defenseur: <?php echo ($hero[($_SESSION['inputs']['customRadio1'])]->name)?></h1>
-        <form action="" method="post">
-            <input type="hidden" name="hpHero1" value="<?=$hero[($_SESSION['inputs']['customRadio1'])]->hp?>">
-            <input type="hidden" name="hpHero2" value="<?=$hero[($_SESSION['inputs']['customRadio2'])]->hp?>">
-            <input type="submit" value="Punch" name="submit1">
-            <input type="submit" value="Kick" name="submit3">
-            <input type="submit" value="Combo" name="submit5">
-            <input type="submit" value="Falcon Punch" name="submit7">
-    <?php }else {?>
-        <h1>Attaquant: <?php echo ($hero[($_SESSION['inputs']['customRadio1'])]->name)?></h1>
-        <h1>Defenseur: <?php echo ($hero[($_SESSION['inputs']['customRadio2'])]->name)?></h1>
-        <form action="" method="post">
-            <input type="hidden" name="hpHero1" value="<?=$hero[($_SESSION['inputs']['customRadio1'])]->hp?>">
-            <input type="hidden" name="hpHero2" value="<?=$hero[($_SESSION['inputs']['customRadio2'])]->hp?>">
-            <input type="submit" value="Punch" name="submit2">
-            <input type="submit" value="Kick" name="submit4">
-            <input type="submit" value="Combo" name="submit6">
-            <input type="submit" value="Falcon Punch" name="submit8">
-        </form>
-    <?php }?>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Attaquant: <?php echo ($hero[($_SESSION['inputs']['customRadio2'])]->name)?></h1>
+                    <p><?=$hero[($_SESSION['inputs']['customRadio2'])]?></p>
+                    <img src="<?=$hero[($_SESSION['inputs']['customRadio2'])]->image?>">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/versus.png">
+                </div>
+                <div class="col-md-4">
+                    <h1>Defenseur: <?php echo ($hero[($_SESSION['inputs']['customRadio1'])]->name)?></h1>
+                    <p><?=$hero[($_SESSION['inputs']['customRadio1'])]?></p>
+                    <img src="<?=$hero[($_SESSION['inputs']['customRadio1'])]->image?>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <form action="" method="post">
+                        <input type="hidden" name="hpHero1" value="<?=$hero[($_SESSION['inputs']['customRadio1'])]->hp?>">
+                        <input type="hidden" name="hpHero2" value="<?=$hero[($_SESSION['inputs']['customRadio2'])]->hp?>">
+                        <input type="submit" value="Punch" name="submit1">
+                        <input type="submit" value="Kick" name="submit3">
+                        <input type="submit" value="Combo" name="submit5">
+                        <input type="submit" value="Falcon Punch" name="submit7">
+                    </form>
+                </div>
+            </div>
+        </div>
+            <?php }else {?>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Defenseur: <?php echo ($hero[($_SESSION['inputs']['customRadio2'])]->name)?></h1>
+                    <p><?=$hero[($_SESSION['inputs']['customRadio2'])]?></p>
+                    <img src="<?=$hero[($_SESSION['inputs']['customRadio2'])]->image?>">
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive" src="img/versus.png">
+                </div>
+                <div class="col-md-4">
+                    <h1>Attaquant: <?php echo ($hero[($_SESSION['inputs']['customRadio1'])]->name)?></h1>
+                    <p><?=$hero[($_SESSION['inputs']['customRadio1'])]?></p>
+                    <img src="<?=$hero[($_SESSION['inputs']['customRadio1'])]->image?>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <form action="" method="post">
+                        <input type="hidden" name="hpHero1" value="<?=$hero[($_SESSION['inputs']['customRadio1'])]->hp?>">
+                        <input type="hidden" name="hpHero2" value="<?=$hero[($_SESSION['inputs']['customRadio2'])]->hp?>">
+                        <input type="submit" value="Punch" name="submit2">
+                        <input type="submit" value="Kick" name="submit4">
+                        <input type="submit" value="Combo" name="submit6">
+                        <input type="submit" value="Falcon Punch" name="submit8">
+                    </form>
+                </div>
+            </div>
+        </div>
+            <?php }?>
     </body>
 </html>
-<?php
-
-echo '<br><br><br><br><br>' . $hero[($_SESSION['inputs']['customRadio1'])] . '<br>';
-echo $hero[($_SESSION['inputs']['customRadio2'])] . '<br>';
-
-
-
-?>
-
 
