@@ -1,0 +1,16 @@
+.Mario{
+    position: absolute;
+    width: 380px;
+    height: 420px;
+}
+
+.Luigi{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
