@@ -54,6 +54,7 @@ require 'creationSuperhero.php';
                 </div>
             </div>
 
+
     </div>
     <div class="container">
         <form action="post_verif.php" method="POST">
@@ -72,6 +73,7 @@ require 'creationSuperhero.php';
                         };?>
 
 
+
                             <h2><?=$hero[$idHero]->name?></h2>
                             <img class="img-thumbnail" src="<?=($hero[$idHero])->image?>" alt="photo hero">
                             <div class="custom-control custom-radio radioDav">
@@ -88,8 +90,6 @@ require 'creationSuperhero.php';
 
 
 
-
-
                     <?php for($l=11; $l<15; $l++){
                         $idAd = rand(0, 731);
                         if (!array_key_exists($idAd, $hero)) {
@@ -100,6 +100,7 @@ require 'creationSuperhero.php';
                                     $idAd = rand(0, 731);                               }
                             }
                         };?>
+
                         <h2><?=$hero[$idAd]->name?></h2>
                         <img class="img-thumbnail" src="<?=($hero[$idAd])->image?>" alt="photo hero">
                         <div class="custom-control custom-radio radioDav">

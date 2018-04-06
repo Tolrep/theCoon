@@ -1,0 +1,101 @@
+
+/**.coin
+{
+
+}
+
+
+.versus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.wantFight
+{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.titleSize
+{
+    font-size: 4rem;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Bangers', cursive;
+    background-image: url("img/33780.gif");
+}
+
+.wantFightSize
+{
+    font-size: 1.8rem;
+    font-family: 'Bangers', cursive;
+}
+
+.banner
+{
+    background-image: url("img/background.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.fondTitre
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+**/
+body
+{
+    background-image: url("img/arene.png");
+    font-family: 'Bangers', cursive;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fontbutton
+{
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.imgvs
+{
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+.bordercol
+{
+    border: 3px solid black;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+.centercol
+{
+    text-align: center;
+}
+
+.bouton
+{
+    size: 3rem;
+}
+
+/**[class*="col-"]
+{
+    border: 3px solid blue;
+    text-align: center;
+}
+
+/**<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  ">
+<h1>THE FIGHT</h1>
+</div>
+<div class="row m-0 p-0 photo_bannier stats_bannier img-fluid">
+<img src="img/coin.png" class="">

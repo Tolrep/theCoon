@@ -1,0 +1,53 @@
+.Mario{
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    margin-top: 300px;
+}
+
+.Luigi{
+    position: absolute;
+    width: 280 px;
+    height: 450px;
+    margin-top: 300px;
+
+}
+
+.winner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.newGame{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.round{
+    background-color: white;
+    color: black;
+}
+.victory{
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.gg{
+    font-size: 25px;
+}
