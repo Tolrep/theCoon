@@ -21,16 +21,43 @@
     margin-bottom: 0px;
 }
 
+.titleSize
+{
+    font-size: 4rem;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Bangers', cursive;
+    background-image: url("img/33780.gif");
+}
+
 .wantFightSize
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Bangers', cursive;
 }
 
 .banner
 {
-    max-height: 500px;
+    background-image: url("img/background.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 
+}
+
+.fondTitre
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+/**[class*="col-"]
+{
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
 }
 
 /**<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  ">
