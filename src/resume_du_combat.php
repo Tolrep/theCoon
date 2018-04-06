@@ -31,14 +31,19 @@
 
     <div class="container-fluid p-0">
         <div class="row">
-            <div class="col-md-4 offset-md-4"><img class=winner src="img/versus.png">
+            <div class="col-md-4 offset-md-4">
+                <img class="victory" src="img/victory.png">
                 <?php
 
                 if (count($_SESSION['roundNumber']%2)) {
                     $result = $hero[($_SESSION['inputs']['customRadio2'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio1'])]->name . " en combat singulier.<br><br>";
-                    ?><p class="text-center"><?= $result?></p><?php
+                    ?><img class="winner" src="<?=$hero[($_SESSION['inputs']['customRadio2'])]->image?>"><?php
+
+                    ?><p class="text-center gg"><?= $result?></p><?php
                 } else {
+
                     $result = $hero[($_SESSION['inputs']['customRadio1'])]->name . " a tue " . $hero[($_SESSION['inputs']['customRadio2'])]->name . " en combat singulier.<br><br>";
+                    ?><img class="winner" src="<?=$hero[($_SESSION['inputs']['customRadio2'])]->image?>"><?php
                     ?><p class="text-center"><?= $result?></p><?php
                 }
 
@@ -60,7 +65,7 @@
 
 
                 ?>
-                <a href="Form.php" type="button" class="btn btn-light winner">NEW GAME</a>
+                <a href="Form.php" type="button" class="btn btn-light winner newGame">NEW GAME</a>
 
             </div>
         </div>

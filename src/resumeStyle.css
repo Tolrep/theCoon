@@ -18,6 +18,15 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.newGame{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 body{
@@ -28,4 +37,17 @@ body{
 .round{
     background-color: white;
     color: black;
+}
+.victory{
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.gg{
+    font-size: 25px;
 }
