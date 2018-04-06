@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
 
@@ -14,12 +15,25 @@
 <body>
 <header>
     <div class="container-fluid p-0">
-        <div class="row m-0 p-0 stats_bannier">
-            <img class="img-fluid" style="width: 100%" src="img/background.png">
+        <div class="row m-0 p-0 no-gutters banner">
+            <img class="img-fluid" src="img/background.png">
         </div>
     </div>
-    <p class="text-center">YOU WANT TO FIGHT ?</p>
-    <a href="Form.php" type="button"><img src="img/coin.png" class="coin"></a>
+    <div class="container">
+
+        <div class="row no-gutters">
+            <div class="col-sm-12">
+                <p class="wantFight wantFightSize">YOU WANT TO FIGHT ?</p>
+            </div>
+        </div>
+
+        <div class="row m-0 p-0 no-gutters">
+            <div class="col-sm-12 no-gutters wantFight">
+                <a class="btn btn-secondary btn-lg" href="Form.php" role="button"><img src="img/coin.png" class="coin img-fluid"></a>
+            </div>
+        </div>
+    </div>
+
 </header>
 <div class="container-fluid">
 
